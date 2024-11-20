@@ -1,0 +1,75 @@
+body {
+  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+ 
+}
+
+.container {
+  background-color: #ff6483;
+  margin: 60px 345px;
+  text-align: center;
+  width: 600px;
+  height: 650px;
+}
+
+h2 {
+  padding-top: 20px;
+  font-size: 50px;
+  color: aliceblue;
+}
+
+button {
+  padding: 12px 10px;
+  border-radius: 15px;
+  background: linear-gradient(32deg, rgba(252, 9, 255, 1) 45%, rgb(143, 143, 143) 65%);
+  color: aliceblue;
+  font-size: 20px;
+
+}
+
+.items {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color:lightskyblue;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  display: flex;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.25s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+}
+
+.items::after {
+  position: absolute;
+  backface-visibility: hidden;
+  background: rgb(47, 255, 255);
+  content: ''; 
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+ display: none;
+}
+
+.gameboard {
+  width: 430px;
+  height: 430px;
+  perspective: 500px;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  padding-left: 90px;
+  padding-block-start: 10px;
+}
+
+.items.rotate {
+  transform: rotateY(360deg);
+}
